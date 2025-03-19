@@ -2,6 +2,11 @@ import os
 import streamlit as st
 import openai
 from db import init_db, save_candidate_data
+from dotenv import load_dotenv
+
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 
 # -------------------------------------------------------------------
 # Database Connection
